@@ -19,6 +19,9 @@ This project implements a scalable deep learning solution for the [Kaggle M5 For
 - Trains on each state’s data independently
 - Generates **28-day ahead forecasts** using recursive decoding
 
+### `lightGBM.ipynb`
+- Builds a LightGBM model and generates 28-day ahead forecasts using all available historical data.
+- Leverages past sales and model predictions to recursively forecast future demand.
 ---
 
 ## 🧠 Model: Sequence-to-Sequence (Seq2Seq)
@@ -36,6 +39,18 @@ A Seq2Seq model is a type of deep learning model that:
 
 ---
 
+## 🌲 Model 2: LightGBM Baseline
+
+**LightGBM** is a fast, tree-based machine learning algorithm ideal for tabular data.
+
+### ✅ Key strengths:
+- Builds **many small decision trees**
+- Learns iteratively from residuals
+- Optimized for **speed and large datasets**
+
+Using a single LightGBM model provides a **strong baseline** to benchmark against deep learning approaches.
+
+---
 ## 📌 Feature Engineering Summary
 
 | Category              | Purpose                                                          | Example Features                        |
@@ -45,14 +60,3 @@ A Seq2Seq model is a type of deep learning model that:
 | Calendar features     | Model recurring time-based patterns                             | `dayofweek`, `month`, `is_weekend`, etc.|
 | Event flags           | Detect demand spikes from holidays/promotions                   | `is_event`                              |
 | Price features        | Capture influence of price and discount changes                 | `price_change_rate`, `price_event_interaction` |
-
----
-
-## 🚀 How to Run
-
-```bash
-# Step 1: Generate features and split data
-data engineering.ipynb
-
-# Step 2: Train and run Seq2Seq model
-sequence-to-sequence.ipynb
