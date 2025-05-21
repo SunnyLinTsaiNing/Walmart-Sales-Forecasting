@@ -6,7 +6,7 @@ This project implements a scalable deep learning solution for the [Kaggle M5 For
 
 ## 📂 Project Structure
 
-### `01_data_engineering_and_split_by_state.py`
+### `data engineering.ipynb`
 - Performs **feature engineering** to extract time-series patterns:
   - Lag features (`lag_7`, `lag_28`)
   - Rolling means (`rolling_mean_7`, `rolling_mean_28`)
