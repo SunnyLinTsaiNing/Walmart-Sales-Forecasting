@@ -14,7 +14,7 @@ This project implements a scalable deep learning solution for the [Kaggle M5 For
   - Event and price-based features
 - Splits the dataset **by U.S. state** to enable memory-efficient training due to data volume.
 
-### `02_seq2seq_model.py`
+### `sequence-to-sequence.ipynb`
 - Builds a **Sequence-to-Sequence model with encoder-decoder architecture**
 - Trains on each state’s data independently
 - Generates **28-day ahead forecasts** using recursive decoding
@@ -52,7 +52,7 @@ A Seq2Seq model is a type of deep learning model that:
 
 ```bash
 # Step 1: Generate features and split data
-python 01_data_engineering_and_split_by_state.py
+data engineering.ipynb
 
 # Step 2: Train and run Seq2Seq model
-python 02_seq2seq_model.py
+sequence-to-sequence.ipynb
