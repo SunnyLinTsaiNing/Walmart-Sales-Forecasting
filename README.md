@@ -1,3 +1,4 @@
+> 🔗 This is a forked project developed in collaboration with [@KoJenKang](https://github.com/KoJenKang) and [@Pin-Shiuan Liang](https://github.com/rachellg99).
 # 🛒 Kaggle M5 Forecasting: Walmart Sales Prediction
 
 This project implements a scalable deep learning solution for the [Kaggle M5 Forecasting](https://www.kaggle.com/competitions/m5-forecasting-accuracy) challenge. It predicts daily product demand using historical sales data, applying advanced **feature engineering** and a **Sequence-to-Sequence (Seq2Seq)** model.
